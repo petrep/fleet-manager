@@ -11,22 +11,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{ list[0].id }}</td>
-            <td>
-                <app-data-cell [cellValue]="list[0].name"></app-data-cell>
-            </td>
-            <td>
-                <app-data-cell [cellValue]="list[0].email"></app-data-cell>
-            </td>
-            <td>
-                <app-data-cell [cellValue]="list[0].phone"></app-data-cell>
-            </td>
-            <td>
-                <app-data-cell [cellValue]="list[0].city"></app-data-cell>
-            </td>
-            <td>
-                <app-data-cell [cellValue]="list[0].address"></app-data-cell>
+        <tr *ngFor="let row of list">
+            <td *ngFor="let col of cols">
+                <app-data-cell [cellValue]="row[col.key]"></app-data-cell>
             </td>
             <td>
                 <div class="btn-group">
