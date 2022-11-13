@@ -12,21 +12,21 @@
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
+            <td>{{ driver.id }}</td>
             <td>
-                <app-data-cell></app-data-cell>
+                <app-data-cell [cellValue]="driver.name"></app-data-cell>
             </td>
             <td>
-                <app-data-cell></app-data-cell>
+                <app-data-cell [cellValue]="driver.email"></app-data-cell>
             </td>
             <td>
-                <app-data-cell></app-data-cell>
+                <app-data-cell [cellValue]="driver.phone"></app-data-cell>
             </td>
             <td>
-                <app-data-cell></app-data-cell>
+                <app-data-cell [cellValue]="driver.city"></app-data-cell>
             </td>
             <td>
-                <app-data-cell></app-data-cell>
+                <app-data-cell [cellValue]="driver.address"></app-data-cell>
             </td>
             <td>
                 <div class="btn-group">
