@@ -21,7 +21,7 @@ export class BaseService {
         email: "idol@gmail.com",
         phone: 36123424321,
         city: "bp",
-        address: "My address"
+        address: "PC Street 33"
       },
       {
         id: 3,

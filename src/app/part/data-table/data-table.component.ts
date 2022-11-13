@@ -13,6 +13,9 @@ export class DataTableComponent implements OnInit {
   @Input()
   cols: any[] = [];
 
+  phraseString;
+  phraseKey: string = 'notset';
+
   deleteIconClass: string = 'fa fa-trash-o';
 
   constructor(

@@ -8,6 +8,7 @@ import { MenuComponent } from './part/menu/menu.component';
 import { DataTableComponent } from './part/data-table/data-table.component';
 import { DataRowComponent } from './part/data-row/data-row.component';
 import { DataCellComponent } from './part/data-cell/data-cell.component';
+import { ObjectArrayPipe } from './pipe/object-array.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DataCellComponent } from './part/data-cell/data-cell.component';
     MenuComponent,
     DataTableComponent,
     DataRowComponent,
-    DataCellComponent
+    DataCellComponent,
+    ObjectArrayPipe
   ],
   imports: [
     BrowserModule,
