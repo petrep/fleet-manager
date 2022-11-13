@@ -10,16 +10,10 @@ export class DataTableComponent implements OnInit {
   @Input()
   list: any[] = [];
 
-  deleteIconClass: string = 'fa fa-trash-o';
+  @Input()
+  cols: any[] = [];
 
-  cols: {key:string, text: string}[] = [
-    {key: 'id', text: '#'},
-    {key: 'name', text: 'Name'},
-    {key: 'email', text: 'Email'},
-    {key: 'phone', text: 'Phone'},
-    {key: 'city', text: 'City'},
-    {key: 'address', text: 'Street Address'}
-  ];
+  deleteIconClass: string = 'fa fa-trash-o';
 
   constructor(
     private bs: BaseService

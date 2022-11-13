@@ -15,26 +15,7 @@ export class BaseService {
       city: "Los Angeles",
       address: "My address"
       }
-    ],
-    vehicles: [
-      {
-      id: 1,
-      lp: "GOD-258",
-      year: 2015,
-      manufacturer: "Volkswagen",
-      consumption: 7,
-      engine: "diesel"
-      }
-    ],
-    fuelings: [
-      {
-      id: 1,
-      vehicle: 1,
-      driver: 1,
-      amount: 40,
-      date: "2019-04-02",
-      }
-    ]
+    ]    
 
   };
 
