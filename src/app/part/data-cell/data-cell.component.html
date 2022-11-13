@@ -1,4 +1,9 @@
-    <input
-    type="text" 
+<span
+    *ngIf="col.type == 'plain'">
+    {{ cellValue }}
+</span>
+<input
+    *ngIf="col.type !='plain'"
+    [type]="col.type" 
     [(ngModel)]="cellValue"
     class="form-control">

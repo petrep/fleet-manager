@@ -6,27 +6,27 @@ import { Injectable } from '@angular/core';
 export class ConfigService {
   cols = {
     drivers: [
-      { key: 'id', text: '#' },
-      { key: 'name', text: 'Name' },
-      { key: 'email', text: 'Email' },
-      { key: 'phone', text: 'Phone' },
-      { key: 'city', text: 'City' },
-      { key: 'address', text: 'Street Address' }
+      { key: 'id', text: '#', type: "plain"},
+      { key: 'name', text: 'Name', type: "text"},
+      { key: 'email', text: 'Email', type: "email"},
+      { key: 'phone', text: 'Phone', type: "number"},
+      { key: 'city', text: 'City', type: "text"},
+      { key: 'address', text: 'Street Address', type: "text"}
     ],
     vehicles: [
-      { key: 'id', text: '#' },
-      { key: 'lp', text: 'lp.' },
-      { key: 'year', text: 'year.' },
-      { key: 'manufacturer', text: 'manuf.' },
-      { key: 'consumption', text: 'cons.' },
-      { key: 'engine', text: 'eng.' },
+      { key: 'id', text: '#', type: "plain"},
+      { key: 'lp', text: 'lp.', type: "text"},
+      { key: 'year', text: 'year.', type: "number"},
+      { key: 'manufacturer', text: 'manuf.', type: "text"},
+      { key: 'consumption', text: 'cons.', type: "text"},
+      { key: 'engine', text: 'eng.', type: "text"},
     ],
     fuelings: [
-      { key: 'id', text: '#' },
-      { key: 'vehicle', text: 'Vehicle' },
-      { key: 'driver', text: 'Driver' },
-      { key: 'amount', text: 'Amount' },
-      { key: 'date', text: 'Date' },
+      { key: 'id', text: '#', type: "plain"},
+      { key: 'vehicle', text: 'Vehicle', type: "text"},
+      { key: 'driver', text: 'Driver', type: "text"},
+      { key: 'amount', text: 'Amount', type: "text"},
+      { key: 'date', text: 'Date', type: "text"},
     ]
   };
 
