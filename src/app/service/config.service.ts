@@ -10,7 +10,12 @@ export class ConfigService {
       { key: 'name', text: 'Name', type: "text"},
       { key: 'email', text: 'Email', type: "email"},
       { key: 'phone', text: 'Phone', type: "number"},
-      { key: 'city', text: 'City', type: "text"},
+      { key: 'city', text: 'City', type: "select",
+        options: [
+          {value: "la", text: "LA"},
+          {value: "bp", text: "BP"}
+        ]
+        },
       { key: 'address', text: 'Street Address', type: "text"}
     ],
     vehicles: [

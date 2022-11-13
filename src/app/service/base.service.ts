@@ -12,7 +12,7 @@ export class BaseService {
         name: "John Doe",
         email: "jd@gmail.com",
         phone: 3612131231,
-        city: "Los Angeles",
+        city: "la",
         address: "My address"
       },
       {
@@ -20,7 +20,7 @@ export class BaseService {
         name: "Jack Idol",
         email: "idol@gmail.com",
         phone: 36123424321,
-        city: "Boston",
+        city: "bp",
         address: "My address"
       },
       {
@@ -28,7 +28,7 @@ export class BaseService {
         name: "Charlie Filpo",
         email: "filpo@gmail.com",
         phone: 36288424321,
-        city: "Chicago",
+        city: "la",
         address: "My address"
       }
     ]
