@@ -34,13 +34,29 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of list | objectArray:phraseString:phraseKey">
+        <tr>
             <td *ngFor="let col of cols">
                 <app-data-cell
-                    [cellValue]="row[col.key]"
+                    [row]="newRow"
                     [col]="col">
                 </app-data-cell>
             </td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-success"
+                        (click)="onCreate(newRow)">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <tr *ngFor="let row of list | objectArray:phraseString:phraseKey">
+          <td *ngFor="let col of cols">
+            <app-data-cell
+                [row]="row"
+                [col]="col">
+            </app-data-cell>
+        </td>
             <td>
                 <div class="btn-group">
                     <button class="btn btn-info"

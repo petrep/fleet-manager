@@ -47,4 +47,10 @@ export class BaseService {
     let url = `${this.serverUrl}${dataType}`;
     return this.http.get(url);
   }
+
+  create(dataType: string, row: any): void {
+    let url = `${this.serverUrl}${dataType}`;
+    this.http.post(url, row)
+      .forEach(response => console.log(response));
+  }
 }

@@ -1,11 +1,10 @@
 <span [ngSwitch]="col.type">
 <span
     *ngSwitchCase="'plain'">
-    {{ cellValue }}
 </span>
 <select
     class="form-control"
-    [(ngModel)]="cellValue"
+    [(ngModel)]="row[col.key]"
     *ngSwitchCase="'select'">
     <option
         *ngFor="let option of col.options"
@@ -17,6 +16,6 @@
 <input
     *ngSwitchDefault
     [type]="col.type" 
-    [(ngModel)]="cellValue"
+    [(ngModel)]="row[col.key]"
     class="form-control">
 </span>

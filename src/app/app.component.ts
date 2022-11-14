@@ -33,4 +33,8 @@ export class AppComponent implements OnInit {
     this.listSubscription.unsubscribe();
   }
 
+  onCreate(row: any): void {
+    this.baseService.create('drivers', row);
+  }
+
 }
