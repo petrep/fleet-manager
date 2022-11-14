@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -37,9 +39,12 @@ export class BaseService {
 
   };
 
-  constructor() { }
+  constructor(
+    private http:HttpClient
+  ) { }
 
-  getAll(dataType: string): any[] {
-    return this.data[dataType];
+  getAll(dataType: string): Observable<any> {
+    let url = `${this.serverUrl}${dataType}`;
+    return this.http.get(url);
   }
 }
