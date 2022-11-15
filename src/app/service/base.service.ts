@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,35 +9,7 @@ import { Observable } from 'rxjs';
 export class BaseService {
   serverUrl: string = "http://localhost:3000/";
   
-  data = {
-    drivers: [
-      {
-        id: 1,
-        name: "John Doe",
-        email: "jd@gmail.com",
-        phone: 3612131231,
-        city: "la",
-        address: "My address"
-      },
-      {
-        id: 2,
-        name: "Jack Idol",
-        email: "idol@gmail.com",
-        phone: 36123424321,
-        city: "bp",
-        address: "PC Street 33"
-      },
-      {
-        id: 3,
-        name: "Charlie Filpo",
-        email: "filpo@gmail.com",
-        phone: 36288424321,
-        city: "la",
-        address: "My address"
-      }
-    ]
-
-  };
+  observables: any = {};
 
   constructor(
     private http:HttpClient
@@ -45,12 +17,19 @@ export class BaseService {
 
   getAll(dataType: string): Observable<any> {
     let url = `${this.serverUrl}${dataType}`;
-    return this.http.get(url);
+    if (!this.observables[dataType]) {
+      this.observables[dataType] = new Subject();
+    }
+    this.http.get(url).forEach(
+      data => this.observables[dataType].next(data)
+    );
+
+    return this.observables[dataType];
   }
 
   create(dataType: string, row: any): void {
     let url = `${this.serverUrl}${dataType}`;
     this.http.post(url, row)
-      .forEach(response => console.log(response));
+      .forEach(response => this.getAll(dataType) );
   }
 }
