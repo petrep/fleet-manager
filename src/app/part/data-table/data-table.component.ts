@@ -14,6 +14,7 @@ export class DataTableComponent implements OnInit {
   cols: any[] = [];
 
   @Output() create: EventEmitter<any> = new EventEmitter();
+  @Output() update: EventEmitter<any> = new EventEmitter();
 
   phraseString;
   phraseKey: string = 'notset';
@@ -32,8 +33,8 @@ export class DataTableComponent implements OnInit {
     this.create.emit(row);
   }
 
-  onUpdate($event): void {
-    alert('update');
+  onUpdate(row): void {
+    this.update.emit(row);
   }
 
   onDelete($event): void {

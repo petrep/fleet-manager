@@ -32,4 +32,10 @@ export class BaseService {
     this.http.post(url, row)
       .forEach(response => this.getAll(dataType) );
   }
+
+  update(dataType: string, row: any): void {
+    let url = `${this.serverUrl}${dataType}/${row.value.id}`;
+    this.http.put(url, row.value)
+      .forEach(response => this.getAll(dataType) );
+  }
 }

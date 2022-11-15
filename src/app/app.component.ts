@@ -37,4 +37,8 @@ export class AppComponent implements OnInit {
     this.baseService.create('drivers', row);
   }
 
+  onUpdate(row: any): void {
+    this.baseService.update('drivers', row);
+  }
+
 }
