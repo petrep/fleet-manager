@@ -41,4 +41,8 @@ export class AppComponent implements OnInit {
     this.baseService.update('drivers', row);
   }
 
+  onDelete(row: any): void {
+    this.baseService.delete('drivers', row);
+  }
+
 }

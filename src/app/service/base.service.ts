@@ -37,5 +37,12 @@ export class BaseService {
     let url = `${this.serverUrl}${dataType}/${row.value.id}`;
     this.http.put(url, row.value)
       .forEach(response => this.getAll(dataType) );
+
+  }
+
+  delete(dataType: string, row: any): void {
+    let url = `${this.serverUrl}${dataType}/${row.value.id}`;
+    this.http.delete(url)
+      .forEach(response => this.getAll(dataType) );
   }
 }

@@ -15,6 +15,7 @@ export class DataTableComponent implements OnInit {
 
   @Output() create: EventEmitter<any> = new EventEmitter();
   @Output() update: EventEmitter<any> = new EventEmitter();
+  @Output() delete: EventEmitter<any> = new EventEmitter();
 
   phraseString;
   phraseKey: string = 'notset';
@@ -37,8 +38,9 @@ export class DataTableComponent implements OnInit {
     this.update.emit(row);
   }
 
-  onDelete($event): void {
-    alert(`Clicked on ${$event} button`);
+  onDelete(row): void {
+    if (confirm("Are you sure?")) {
+      this.delete.emit(row);
+    }    
   }
-
 }
