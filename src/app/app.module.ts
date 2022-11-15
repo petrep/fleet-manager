@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,14 @@ import { HomeComponent } from './page/home/home.component';
 import { DriverComponent } from './page/driver/driver.component';
 import { VehicleComponent } from './page/vehicle/vehicle.component';
 import { FuelingComponent } from './page/fueling/fueling.component';
+
+const appRouting: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'fueling', component: FuelingComponent },
+  { path: 'vehicle', component: VehicleComponent },
+  { path: 'driver', component: DriverComponent },
+  { path: '**', component: HomeComponent }
+]
 
 @NgModule({
   declarations: [
@@ -32,7 +41,8 @@ import { FuelingComponent } from './page/fueling/fueling.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRouting)
   ],
   providers: [],
   bootstrap: [AppComponent]
