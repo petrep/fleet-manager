@@ -1,6 +1,7 @@
 <span [ngSwitch]="col.type">
 <span
     *ngSwitchCase="'plain'">
+    {{ row[col.key] }}
 </span>
 <select
     class="form-control"
