@@ -61,13 +61,6 @@
     },
     {
       "vehicleId": "2",
-      "driverId": "7",
-      "amount": "100",
-      "date": "2019-03-04",
-      "id": 2
-    },
-    {
-      "vehicleId": "2",
       "driverId": "1",
       "amount": "55",
       "date": "2019-03-13",

@@ -10,6 +10,10 @@ import { DataTableComponent } from './part/data-table/data-table.component';
 import { DataRowComponent } from './part/data-row/data-row.component';
 import { DataCellComponent } from './part/data-cell/data-cell.component';
 import { ObjectArrayPipe } from './pipe/object-array.pipe';
+import { HomeComponent } from './page/home/home.component';
+import { DriverComponent } from './page/driver/driver.component';
+import { VehicleComponent } from './page/vehicle/vehicle.component';
+import { FuelingComponent } from './page/fueling/fueling.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ObjectArrayPipe } from './pipe/object-array.pipe';
     DataTableComponent,
     DataRowComponent,
     DataCellComponent,
-    ObjectArrayPipe
+    ObjectArrayPipe,
+    HomeComponent,
+    DriverComponent,
+    VehicleComponent,
+    FuelingComponent
   ],
   imports: [
     BrowserModule,
