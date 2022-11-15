@@ -50,7 +50,7 @@
                 </div>
             </td>
         </tr>
-        <tr *ngFor="let row of list | keyvalue">
+        <tr *ngFor="let row of list | objectArray:phraseString:phraseKey">
           <td *ngFor="let col of cols">
             <app-data-cell
                 [row]="row"
