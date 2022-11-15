@@ -24,14 +24,11 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>{{ cols[0].text }}</th>
-            <th>{{ cols[1].text }}</th>
-            <th>{{ cols[2].text }}</th>
-            <th>{{ cols[3].text }}</th>
-            <th>{{ cols[4].text }}</th>
-            <th>{{ cols[5].text }}</th>
-            <th>action</th>
-        </tr>
+            <th *ngFor="let col of cols">
+              {{ col.text }}
+            </th>
+            <th>actions</th>
+          </tr>
     </thead>
     <tbody>
         <tr>
@@ -51,8 +48,9 @@
             </td>
         </tr>
 <!--         <tr *ngFor="let row of list | objectArray:phraseString:phraseKey"> -->
-        <tr *ngFor="let row of list | keyvalue ">
-            
+    
+    <tr *ngFor="let row of list | keyvalue ">
+        
           <td *ngFor="let col of cols">
     
             <app-data-cell

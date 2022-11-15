@@ -58,13 +58,6 @@
       "driverId": "2",
       "amount": 40,
       "date": "2019-04-01"
-    },
-    {
-      "vehicleId": "2",
-      "driverId": "1",
-      "amount": "55",
-      "date": "2019-03-13",
-      "id": 3
     }
   ]
 }
