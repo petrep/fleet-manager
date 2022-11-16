@@ -15,6 +15,12 @@ export class BaseService {
     private http:HttpClient
   ) { }
 
+  query(dataType: string, params: string): Promise<any> {
+    let url = `${this.serverUrl}${dataType}?${params}`;
+    //http://localhost:3000/fuelings?_expand=vehicle&_expand=driver
+    return this.http.get(url).toPromise();
+  }
+
   getAll(dataType: string): Observable<any> {
     let url = `${this.serverUrl}${dataType}`;
     if (!this.observables[dataType]) {
