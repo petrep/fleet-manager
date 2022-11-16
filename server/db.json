@@ -57,7 +57,9 @@
       "vehicleId": "1",
       "driverId": "2",
       "amount": 40,
-      "date": "2019-04-01"
+      "date": "2019-04-01",
+      "vehicle": "1",
+      "driver": "John Doe"
     }
   ]
 }

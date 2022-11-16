@@ -31,14 +31,14 @@ ngOnDestroy() {
 }
 
 onCreate(row: any): void {
-  this.baseService.create('drivers', row);
+  this.baseService.create(this.dataType, row);
 }
 
 onUpdate(row: any): void {
-  this.baseService.update('drivers', row);
+  this.baseService.update(this.dataType, row);
 }
 
 onDelete(row: any): void {
-  this.baseService.delete('drivers', row);
+  this.baseService.delete(this.dataType, row);
 }
 }
