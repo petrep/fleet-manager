@@ -11,12 +11,12 @@ cols: any[] = [];
 listSubscription: Subscription = new Subscription;
 
 constructor(
-  private baseService: BaseService,
-  private config: ConfigService,
+  protected baseService: BaseService,
+  protected config: ConfigService,
   @Inject(String) public dataType: string
 ) {}
 
-ngOnInit(): void {
+ngOnInit() {
   this.cols = this.config.cols[this.dataType];
   this.listSubscription = this.baseService.getAll(this.dataType)
   .subscribe(

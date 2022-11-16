@@ -63,18 +63,9 @@
     {
       "id": 1,
       "vehicleId": "1",
-      "driverId": "2",
+      "driverId": "1",
       "amount": 40,
-      "date": "2019-04-01",
-      "vehicle": "1",
-      "driver": "John Doe"
-    },
-    {
-      "vehicle": "2",
-      "driver": "Jack Doe",
-      "amount": "20",
-      "date": "2022-02-02",
-      "id": 2
+      "date": "2019-04-01"
     }
   ]
 }

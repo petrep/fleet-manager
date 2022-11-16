@@ -10,12 +10,7 @@ export class ConfigService {
       { key: 'name', text: 'Name', type: "text"},
       { key: 'email', text: 'Email', type: "email"},
       { key: 'phone', text: 'Phone', type: "number"},
-      { key: 'city', text: 'City', type: "select",
-        options: [
-          {value: "la", text: "LA"},
-          {value: "bp", text: "BP"}
-        ]
-        },
+      { key: 'city', text: 'City', type: "text"},
       { key: 'address', text: 'Street Address', type: "text"}
     ],
     vehicles: [
@@ -28,8 +23,8 @@ export class ConfigService {
     ],
     fuelings: [
       { key: 'id', text: '#', type: "plain"},
-      { key: 'vehicle', text: 'Vehicle', type: "text"},
-      { key: 'driver', text: 'Driver', type: "text"},
+      { key: 'vehicleId', text: 'Vehicle', type: "text"},
+      { key: 'driverId', text: 'Driver', type: "text"},
       { key: 'amount', text: 'Amount', type: "text"},
       { key: 'date', text: 'Date', type: "text"},
     ]
