@@ -49,6 +49,14 @@
       "consumption": "12",
       "engine": "gasoline",
       "id": 2
+    },
+    {
+      "lp": "ACS-259",
+      "year": "1980",
+      "manufacturer": "Opel",
+      "consumption": "9",
+      "engine": "v1",
+      "id": 3
     }
   ],
   "fuelings": [
@@ -60,6 +68,13 @@
       "date": "2019-04-01",
       "vehicle": "1",
       "driver": "John Doe"
+    },
+    {
+      "vehicle": "2",
+      "driver": "Jack Doe",
+      "amount": "20",
+      "date": "2022-02-02",
+      "id": 2
     }
   ]
 }
