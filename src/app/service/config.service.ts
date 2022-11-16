@@ -26,7 +26,7 @@ export class ConfigService {
       { key: 'vehicleId', text: 'Vehicle', type: "text"},
       { key: 'driverId', text: 'Driver', type: "text"},
       { key: 'amount', text: 'Amount', type: "text"},
-      { key: 'date', text: 'Date', type: "text"},
+      { key: 'date', text: 'Date', type: "date"},
     ]
   };
 
